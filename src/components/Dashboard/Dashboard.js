@@ -6,7 +6,7 @@ class Dashboard extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      isFetching: false,
+      isFetching: true,
       dashboardTableData: []
     };
     this.fetchDashboardTableData = this.fetchDashboardTableData.bind(this);
@@ -17,7 +17,7 @@ class Dashboard extends React.Component {
         // .then(response => console.log(response))
         .then(response => response.json())
         .then(data => {
-          this.setState({ ...this.state, dashboardTableData: data })
+          this.setState({ isFetching: false, dashboardTableData: data })
         })
   }
 
@@ -35,7 +35,7 @@ class Dashboard extends React.Component {
               <ol className="breadcrumb mb-4">
                 <li className="breadcrumb-item active">Dashboard</li>
               </ol>
-              <DashboardTable data={this.state.dashboardTableData}/>
+              <DashboardTable data={this.state.dashboardTableData} isFetching={this.state.isFetching}/>
             </div>
           </main>
         </div>

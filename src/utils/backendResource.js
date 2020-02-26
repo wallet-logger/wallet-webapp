@@ -1,1 +1,1 @@
-export const DASHBOARD_TABLE_URL='https://wallet-online.herokuapp.com/dashboard/getAll'
+export const DASHBOARD_TABLE_URL='https://wallet-online.herokuapp.com/dashboard/payment/getAll'
