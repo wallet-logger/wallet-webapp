@@ -10,12 +10,10 @@ class Sidebar extends React.Component {
     return (
         <React.Fragment>
             <div id="layoutSidenav_nav">
-              <nav className="sb-sidenav accordion sb-sidenav-dark"
-                   id="sidenavAccordion">
+              <nav className="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                 <div className="sb-sidenav-menu">
                   <div className="nav">
                     <SidebarSection headerName="Core" sidebarEntries={[{title:'Dashboard', active: true}]} />
-
                     <div className="sb-sidenav-menu-heading">Interface</div>
                     <a className="nav-link collapsed" href="#"
                        data-toggle="collapse" data-target="#collapseLayouts"

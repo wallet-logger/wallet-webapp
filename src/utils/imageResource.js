@@ -1,0 +1,1 @@
+export const logo_amex_platinum = "https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/category/cardarts/platinum-card.png"
