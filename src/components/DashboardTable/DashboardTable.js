@@ -47,24 +47,14 @@ function DataboardTable (props) {
                   <table className="table table-bordered" id="dataTable" width="100%" cellSpacing="0">
                     <thead>
                     <tr>
-                      <th>Name</th>
-                      <th>Position</th>
-                      <th>Office</th>
-                      <th>Age</th>
-                      <th>Start date</th>
-                      <th>Salary</th>
+                      <th>Date</th>
+                      <th>Account</th>
+                      <th>Category</th>
+                      <th>Item</th>
+                      <th>Amount</th>
+                      <th>Type</th>
                     </tr>
                     </thead>
-                    <tfoot>
-                    <tr>
-                      <th>Name</th>
-                      <th>Position</th>
-                      <th>Office</th>
-                      <th>Age</th>
-                      <th>Start date</th>
-                      <th>Salary</th>
-                    </tr>
-                    </tfoot>
                     <tbody>
                     {data.map((row, index) => {
                       return (

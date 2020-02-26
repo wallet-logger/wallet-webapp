@@ -1,5 +1,6 @@
 import React from 'react'
 import DashboardTable from '../DashboardTable/DashboardTable';
+import { DASHBOARD_TABLE_URL } from '../../utils/backendResource';
 
 class Dashboard extends React.Component {
   constructor(props){
@@ -12,11 +13,10 @@ class Dashboard extends React.Component {
   }
 
   fetchDashboardTableData() {
-    fetch('http://localhost:8000/dashboard/home')
+    fetch(DASHBOARD_TABLE_URL)
         // .then(response => console.log(response))
         .then(response => response.json())
         .then(data => {
-          console.log(data);
           this.setState({ ...this.state, dashboardTableData: data })
         })
   }
@@ -26,17 +26,6 @@ class Dashboard extends React.Component {
   }
 
   render() {
-    // const dashboardTableData = [
-    //   {
-    //     name: 'june',
-    //     office: 'new york',
-    //     age: '22',
-    //     startDate: '2012/02/22',
-    //     position: 'clerk',
-    //     salary: '200',
-    //   }
-    // ];
-
     return (
       <React.Fragment>
         <div id="layoutSidenav_content">

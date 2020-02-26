@@ -1,16 +1,16 @@
 import React from 'react';
 
 function DataboardTableEntry (props) {
-  const { row : { name, position, office, age, startDate, salary } } = props;
+  const { row : { date, account, category, item, amount, type } } = props;
   return (
       <React.Fragment>
         <tr>
-          <td>{name}</td>
-          <td>{position}</td>
-          <td>{office}</td>
-          <td>{age}</td>
-          <td>{startDate}</td>
-          <td>{salary}</td>
+          <td>{date}</td>
+          <td>{account}</td>
+          <td>{category}</td>
+          <td>{item}</td>
+          <td>{amount}</td>
+          <td>{type ? "Expense" : "Income"}</td>
         </tr>
       </React.Fragment>
   );
